@@ -8,12 +8,3 @@ select employee_id,
 if(employee_id%2=1 and name not like 'M%',salary,0) as bonus
 from employees
 order by employee_id
-
-
-Problem statement - For salary table: Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temporary tables.
-Solution - 
-UPDATE salary SET sex =
-CASE sex
-    WHEN 'm' THEN 'f'
-    ELSE 'm'
-END;
