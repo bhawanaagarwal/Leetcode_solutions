@@ -1,0 +1,19 @@
+to filter the values and update it, we can use two methods,
+1. if statement
+2. case statement
+
+Problem statement - For employees table: Write an SQL query to calculate the bonus of each employee. The bonus of an employee is 100% of their salary if the ID of the employee is an odd number and the employee name does not start with the character 'M'. The bonus of an employee is 0 otherwise.
+Solution - 
+select employee_id,
+if(employee_id%2=1 and name not like 'M%',salary,0) as bonus
+from employees
+order by employee_id
+
+
+Problem statement - For salary table: Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temporary tables.
+Solution - 
+UPDATE salary SET sex =
+CASE sex
+    WHEN 'm' THEN 'f'
+    ELSE 'm'
+END;
