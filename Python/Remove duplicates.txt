@@ -1,1 +1,13 @@
+Problem statement - Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Solution - 
+def containsDuplicate(self, nums: List[int]) -> bool:
+        # method1
+        # list_ = []
+        # for i in nums:
+        #     if i in list_:
+        #         return True
+        #     else:
+        #         list_.append(i)
 
+        # method2
+        return not(len(nums) == len(set(nums)))
